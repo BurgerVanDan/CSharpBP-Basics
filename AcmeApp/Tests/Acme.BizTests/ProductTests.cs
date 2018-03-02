@@ -25,5 +25,17 @@ namespace Acme.Biz.Tests
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod()]
+        public void SayHelloParameterisedTest()
+        {
+            //Arrange
+            var currentProduct = new Product("Xbox", "Microsoft's gaming console", 1);
+            var expected = "Hello Xbox (1): Microsoft's gaming console";
+            //Act
+            var actual = currentProduct.SayHello();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
