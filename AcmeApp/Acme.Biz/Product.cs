@@ -14,6 +14,7 @@ namespace Acme.Biz
         public Product()
         {
             Console.WriteLine("Product instance created");
+            ProductVendor = new Vendor();
         }
         public Product(string productName, string description, int productId) :this()
         {
@@ -44,6 +45,14 @@ namespace Acme.Biz
             get { return productId; }
             set { productId = value; }
         }
+        private Vendor productVendor;
+
+        public Vendor ProductVendor
+        {
+            get { return productVendor; }
+            set { productVendor = value; }
+        }
+
 
         public string SayHello()
         {

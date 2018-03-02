@@ -19,6 +19,7 @@ namespace Acme.Biz.Tests
             currentProduct.ProductId = 1;
             currentProduct.ProductName = "Xbox";
             currentProduct.Description = "Microsoft's gaming console";
+            currentProduct.ProductVendor.CompanyName = "ABC Corp";
             var expected = "Hello Xbox (1): Microsoft's gaming console";
             //Act
             var actual = currentProduct.SayHello();
