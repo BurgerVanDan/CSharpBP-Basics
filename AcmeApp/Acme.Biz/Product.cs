@@ -24,6 +24,14 @@ namespace Acme.Biz
             Console.WriteLine("Product created with name: " + ProductName);
         }
 
+        private DateTime? availabilityDate;
+
+        public DateTime? AvailabilityDate
+        {
+            get { return availabilityDate; }
+            set { availabilityDate = value; }
+        }
+
         private string productName;
 
         public string ProductName
@@ -56,7 +64,7 @@ namespace Acme.Biz
 
         public string SayHello()
         {
-            return "Hello " + ProductName + " (" + ProductId + "): " + Description;
+            return "Hello " + ProductName + " (" + ProductId + "): " + Description + " Available on: " + AvailabilityDate?.ToShortDateString();
         }
     }
 }

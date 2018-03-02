@@ -20,7 +20,7 @@ namespace Acme.Biz.Tests
             currentProduct.ProductName = "Xbox";
             currentProduct.Description = "Microsoft's gaming console";
             currentProduct.ProductVendor.CompanyName = "ABC Corp";
-            var expected = "Hello Xbox (1): Microsoft's gaming console";
+            var expected = "Hello Xbox (1): Microsoft's gaming console Available on: ";
             //Act
             var actual = currentProduct.SayHello();
             //Assert
@@ -32,7 +32,7 @@ namespace Acme.Biz.Tests
         {
             //Arrange
             var currentProduct = new Product("Xbox", "Microsoft's gaming console", 1);
-            var expected = "Hello Xbox (1): Microsoft's gaming console";
+            var expected = "Hello Xbox (1): Microsoft's gaming console Available on: ";
             //Act
             var actual = currentProduct.SayHello();
             //Assert
