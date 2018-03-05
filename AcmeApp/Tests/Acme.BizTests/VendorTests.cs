@@ -56,20 +56,6 @@ namespace Acme.Biz.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
-        public void PlaceOrderTest()
-        {
-            //Arange
-            var vendor = new Vendor();
-            var product = new Product("Xbox", "", 1);
-            var expected = true;
-
-            //Act
-            var actual = vendor.PlaceOrder(product, 12);
-
-            //Assert
-            Assert.AreEqual(expected, actual);
-        }
 
         [TestMethod()]
         [ExpectedException(typeof(ArgumentNullException))]

@@ -32,6 +32,8 @@ namespace Acme.Biz
             set { availabilityDate = value; }
         }
 
+        public decimal Cost { get; set; }
+
         private string productName;
 
         public string ProductName
@@ -69,5 +71,8 @@ namespace Acme.Biz
         {
             return "Hello " + ProductName + " (" + ProductId + "): " + Description + " Available on: " + AvailabilityDate?.ToShortDateString();
         }
+
+        public decimal CalculateSuggestedPrice(decimal markupPercent) =>
+            this.Cost + (this.Cost * markupPercent / 100);
     }
 }
