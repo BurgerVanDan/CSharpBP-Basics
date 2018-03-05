@@ -36,7 +36,10 @@ namespace Acme.Biz
 
         public string ProductName
         {
-            get { return productName; }
+            get {
+                var formattedString = productName?.Trim();
+                return formattedString;
+            }
             set { productName = value; }
         }
         private string description;
